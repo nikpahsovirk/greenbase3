@@ -2,7 +2,6 @@ package com.example.greenbase3
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.greenbase3.R
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback

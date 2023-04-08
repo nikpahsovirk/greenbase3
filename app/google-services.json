@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "193762429232",
+    "project_id": "greenbase3-4ba57",
+    "storage_bucket": "greenbase3-4ba57.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193762429232:android:b8d419becfbae935aea0f5",
+        "android_client_info": {
+          "package_name": "com.example.greenbase3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193762429232-temlm9lpm3b3be0keluroq1i4k6qclk0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1ZB3WVvAU4NRUgBkd9JM-FKg3UgSZcjE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193762429232-temlm9lpm3b3be0keluroq1i4k6qclk0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
