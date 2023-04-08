@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">greenbase3</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logout">ВЫЙТИ</string>
+    <string name="legend">Легенда</string>
+    <string name="drones">Дроны</string>
+    <string name="diaryfire">diaryfire</string>
+    <string name="belka">belka</string>
 </resources>

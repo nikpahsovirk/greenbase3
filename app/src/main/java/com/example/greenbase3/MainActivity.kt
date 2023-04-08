@@ -1,36 +1,40 @@
 package com.example.greenbase3
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
+import android.widget.Button
+import android.widget.TextView
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import com.example.greenbase3.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
-internal class MainActivity : AppCompatActivity(), OnMapReadyCallback {
-
-    private lateinit var mMap: GoogleMap
+internal class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var navController: NavController
+    private var button: Button? = null
+    var auth: FirebaseAuth? = null
+    var textView: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        button = findViewById(R.id.logout)
+        auth = FirebaseAuth.getInstance()
+        textView = findViewById(R.id.user_details)
+        MAIN = this
 
-        val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as SupportMapFragment
-        mapFragment.getMapAsync(this)
+        button?.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            val intent = Intent(applicationContext, Login::class.java)
+            startActivity(intent)
+            finish()
+
+        }
+
     }
-
-    override fun onMapReady(googleMap: GoogleMap) {
-        mMap = googleMap
-        val yakutsk = LatLng(62.0397, 129.7422)
-
-        mMap.addMarker(MarkerOptions()
-            .position(yakutsk)
-            .title("Marker in Yakutsk"))
-
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(yakutsk))
-        mMap.uiSettings.isZoomControlsEnabled = true
-    }
-
 }

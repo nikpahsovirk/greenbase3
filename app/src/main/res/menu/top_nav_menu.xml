@@ -1,18 +1,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/book"
+        android:id="@+id/navigation_home"
         android:title="Дневник пожаров" />
 
     <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/vector"
+        android:id="@+id/navigation_dashboard"
         android:title="Карта" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/group"
         android:title="Профиль" />
 
 </menu>

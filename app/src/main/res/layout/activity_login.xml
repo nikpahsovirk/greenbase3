@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="15dp"
+    android:padding="40dp"
     android:layout_height="match_parent"
     tools:context=".Login">
 
@@ -15,29 +14,21 @@
         android:textSize="25sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="150dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="login" />
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:text="Войдите по электронной почте" />
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email"
-            android:hint="email"
+            android:hint="Введите эл. почту"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
-            android:hint="password"
+            android:hint="Пароль"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-    </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -47,17 +38,18 @@
 
     <Button
         android:id="@+id/btn_login"
-        android:text="login"
+        android:text="                                Войти                                  "
+        android:textSize="20sp"
         android:layout_width="wrap_content"
+            android:backgroundTint="#3F5038"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/RegisterNow"
-        android:textStyle="bold"
-        android:textSize="40sp"
+        android:textSize="15sp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="click to register"
+        android:text="Регистрация"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/belkaFragment">
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.greenbase3.screens.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.greenbase3.screens.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/diaryFragment2"
+        android:name="com.example.greenbase3.screens.DiaryFragment"
+        android:label="DiaryFragment" />
+    <fragment
+        android:id="@+id/belkaFragment"
+        android:name="com.example.greenbase3.screens.BelkaFragment"
+        android:label="BelkaFragment" />
+</navigation>

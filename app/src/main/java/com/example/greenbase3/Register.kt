@@ -14,12 +14,12 @@ import com.google.firebase.auth.FirebaseAuth
 import java.util.*
 
 internal class Register : AppCompatActivity() {
-    var editTextEmail: TextInputEditText? = null
-    var editTextPassword: TextInputEditText? = null
-    var buttonReg: Button? = null
-    var mAuth: FirebaseAuth? = null
-    var progressBar: ProgressBar? = null
-    var textView: TextView? = null
+    private var editTextEmail: TextInputEditText? = null
+    private var editTextPassword: TextInputEditText? = null
+    private var buttonReg: Button? = null
+    private var mAuth: FirebaseAuth? = null
+    private var progressBar: ProgressBar? = null
+    private var textView: TextView? = null
     public override fun onStart() {
         super.onStart()
         val currentUser = mAuth!!.currentUser
@@ -39,17 +39,15 @@ internal class Register : AppCompatActivity() {
         buttonReg = findViewById(R.id.btn_register)
         progressBar = findViewById(R.id.progressBar)
         textView = findViewById(R.id.loginNow)
-        textView?.setOnClickListener(View.OnClickListener {
+        textView?.setOnClickListener {
             val intent = Intent(applicationContext, Login::class.java)
             startActivity(intent)
             finish()
-        })
+        }
         buttonReg?.setOnClickListener(View.OnClickListener {
-            progressBar?.setVisibility(View.VISIBLE)
-            val email: String
-            val password: String
-            email = Objects.requireNonNull(editTextEmail?.getText()).toString()
-            password = Objects.requireNonNull(editTextPassword?.getText()).toString()
+            progressBar?.visibility = View.VISIBLE
+            val email: String = Objects.requireNonNull(editTextEmail?.text).toString()
+            val password: String = Objects.requireNonNull(editTextPassword?.text).toString()
             if (TextUtils.isEmpty(email)) {
                 Toast.makeText(this@Register, "Enter Email", Toast.LENGTH_SHORT).show()
                 return@OnClickListener
@@ -61,7 +59,7 @@ internal class Register : AppCompatActivity() {
             mAuth!!.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        progressBar?.setVisibility(View.GONE)
+                        progressBar?.visibility = View.GONE
                         Toast.makeText(this@Register, "Account Created.", Toast.LENGTH_SHORT).show()
                         val intent = Intent(applicationContext, MainActivity::class.java)
                         startActivity(intent)
