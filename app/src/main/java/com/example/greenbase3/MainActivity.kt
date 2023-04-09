@@ -1,10 +1,12 @@
 package com.example.greenbase3
 
+import android.app.Application
+import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.greenbase3.databinding.ActivityMainBinding
@@ -17,6 +19,7 @@ internal class MainActivity : AppCompatActivity() {
     private var button: Button? = null
     var auth: FirebaseAuth? = null
     var textView: TextView? = null
+    var user: FirebaseUser? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

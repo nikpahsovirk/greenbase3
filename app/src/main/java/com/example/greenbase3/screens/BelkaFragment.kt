@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.greenbase3.R
 import com.example.greenbase3.databinding.FragmentBelkaBinding
+import java.util.*
 
 class BelkaFragment : Fragment() {
 
@@ -26,20 +27,21 @@ class BelkaFragment : Fragment() {
             when (item.itemId) {
                 R.id.navigation_home -> {
                     childFragmentManager.beginTransaction()
-                        .replace(R.id.map, HomeFragment()).commit()
+                        .replace(R.id.belochka, HomeFragment()).commit()
                     return@setOnItemSelectedListener true
                 }
                 R.id.navigation_dashboard -> {
                     childFragmentManager.beginTransaction()
-                        .replace(R.id.map, DiaryFragment()).commit()
+                        .replace(R.id.belochka, DiaryFragment()).commit()
                     return@setOnItemSelectedListener true
                 }
                 R.id.navigation_notifications -> {
                     childFragmentManager.beginTransaction()
-                        .replace(R.id.map, ProfileFragment()).commit()
+                        .replace(R.id.belochka, ProfileFragment()).commit()
                     return@setOnItemSelectedListener true
                 }
             }
             false
         }
+
     }}

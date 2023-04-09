@@ -4,12 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/belochka"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/belka"
-        android:scaleType="center"
-        android:contentDescription="@string/belka" />
+        android:layout_height="match_parent"/>
+
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
